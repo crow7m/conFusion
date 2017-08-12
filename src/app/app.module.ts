@@ -3,12 +3,14 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
-import {MdButtonModule, MdCheckboxModule, MdToolbarModule } from '@angular/material';
+import {MdButtonModule, MdCheckboxModule, MdToolbarModule, MdListModule, MdGridListModule, MdCardModule } from '@angular/material';
 import {FlexLayoutModule } from '@angular/flex-layout';
 import 'hammerjs';
+import { MenuComponent } from './menu/menu.component';
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    MenuComponent
   ],
   imports: [
     BrowserModule,
@@ -17,7 +19,10 @@ import 'hammerjs';
     //Angular material imports
     MdButtonModule,
     MdCheckboxModule,
-    MdToolbarModule
+    MdToolbarModule,
+    MdListModule,
+    MdGridListModule,
+    MdCardModule
 
 
   ],
