@@ -1,0 +1,15 @@
+<md-card *ngIf="dish">
+  <md-card-header>
+    <md-card-title>{{dish.name | uppercase}}</md-card-title>
+
+  </md-card-header>
+  <img mdCardImage src="{{dish.image}}">
+  <md-card-content>
+   <p>{{dish.description}}</p>
+  </md-card-content>
+  <md-card-actions align="start">
+    <button md-button (click)="onAction1">LIKE</button>
+    <button md-button (click)="onAction1">SHARE</button>
+
+  </md-card-actions>
+</md-card>
