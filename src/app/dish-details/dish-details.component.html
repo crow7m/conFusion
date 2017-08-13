@@ -1,15 +1,43 @@
-<md-card *ngIf="dish">
-  <md-card-header>
-    <md-card-title>{{dish.name | uppercase}}</md-card-title>
+<div class="container"
+     fxLayout="row"
+     fxLayout.sm="column"
+     fxLayout.xs="column"
+     fxLayoutAlign.gt-md="space-around center"
+     fxLayoutGap="10px"
+     fxLayoutGap.xs="0">
 
-  </md-card-header>
-  <img mdCardImage src="{{dish.image}}">
-  <md-card-content>
-   <p>{{dish.description}}</p>
-  </md-card-content>
-  <md-card-actions align="start">
-    <button md-button (click)="onAction1">LIKE</button>
-    <button md-button (click)="onAction1">SHARE</button>
+  <div fxFlex="40">
+    <md-card *ngIf="dish">
+      <md-card-header>
+        <md-card-title>{{dish.name | uppercase}}</md-card-title>
 
-  </md-card-actions>
-</md-card>
+      </md-card-header>
+      <img mdCardImage src="{{dish.image}}">
+      <md-card-content>
+        <p>{{dish.description}}</p>
+      </md-card-content>
+      <md-card-actions align="start">
+        <button md-button (click)="onAction1">LIKE</button>
+        <button md-button (click)="onAction1">SHARE</button>
+
+      </md-card-actions>
+    </md-card>
+  </div>
+
+  <div fxFlex="40">
+    <h1>Comments</h1>
+    <md-list >
+      <md-list-item *ngFor="let singleComment of dish.comments">
+        <p md-line>{{singleComment.comment}}</p>
+        <span md-line>{{singleComment.rating}} Stars</span>
+        <span md-line>--{{singleComment.author}} {{singleComment.date | date}}</span>
+
+      </md-list-item>
+      <md-divider></md-divider>
+    </md-list>
+  </div>
+
+</div>
+
+
+
