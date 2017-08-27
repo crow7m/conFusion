@@ -31,6 +31,7 @@ import { LeaderService} from './services/leader.service';
 
 import { AppRoutingModule } from './app-routing/app-routing.module'
 import { FormsModule } from '@angular/forms';
+import { ReactiveFormsModule } from '@angular/forms';
 import { LoginComponent } from './login/login.component';
 
 @NgModule({
@@ -61,6 +62,7 @@ import { LoginComponent } from './login/login.component';
     MdCardModule,
     AppRoutingModule,
     FormsModule,
+    ReactiveFormsModule,
     MdDialogModule
 
 
